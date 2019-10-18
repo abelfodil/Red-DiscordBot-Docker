@@ -1,0 +1,12 @@
+version: "3"
+services:
+  red:
+    image: docker.pkg.github.com/abelfodil/red-discordbot-docker/red:latest
+    restart: always
+    env_file: .env
+    volumes:
+      - data:/data
+    command: sh -c "redbot Red-DiscordBot-Docker --no-prompt --mentionable --prefix - --token $$TOKEN"
+
+volumes:
+  data:
