@@ -6,7 +6,7 @@ services:
     env_file: .env
     volumes:
       - data:/data
-    command: sh -c "redbot Red-DiscordBot-Docker --no-prompt --prefix $$PREFIX --token $$TOKEN $$EXTRA_ARGS"
+    command: sh -c "redbot docker --no-prompt --prefix $$PREFIX --token $$TOKEN $$EXTRA_ARGS"
 
 volumes:
   data:
